@@ -5,7 +5,8 @@
 **However when you add a -v to the end, it will output all the lines that does not contain the string given.**
 
 *Examples*
-1. Use grep -v to find all the file that doesn't contain "China" in the file name
+## 1. Use grep -v to find all the file that doesn't contain "China" in the file name
+
 ```
 find written_2/ -name "*China*.txt" > find_CN.txt                  --Used to find all the txt files that has China in the name and write it into a file
 
@@ -23,7 +24,7 @@ written_2/travel_guides/berlitz2/China-WhatToDo.txt
 written_2/travel_guides/berlitz2/China-WhereToGo.txt
 ```
 
-2. Use grep -v to find lines in *Bahamas-History* that doesn't contain "Lucayans"
+## 2. Use grep -v to find lines in *Bahamas-History* that doesn't contain "Lucayans"
 ```
 grep -v "Lucayans" written_2/travel_guides/berlitz2/Bahamas-History.txt > noLucas.txt.        --noLucas is a file contains all the line of Bahamas-History.txt, except for those containing Lucayans
 
@@ -40,7 +41,7 @@ output: N/A
 This option adds line numbers to the output, which can be useful for tracking down a specific line of text.
 
 *Examples*
-1. use grep -n to get the line index of government's appearance in Bahamas-History.txt.
+## 1. use grep -n to get the line index of government's appearance in Bahamas-History.txt.
 ```
 grep -n "government" written_2/travel_guides/berlitz2/Bahamas-History.txt                     --This has the same effect as grep but with line number
 output:
@@ -50,7 +51,7 @@ output:
 38:Since independence the Bahamas has kept British systems of judiciary and government yet has moved closer economically to its near neighbor, the US. The Bahamian Government...
 ```
 
-2. use grep -n to get the line index of government's appearance in Bahamas-History.txt.
+## 2. use grep -n to get the line index of government's appearance in Bahamas-History.txt.
 ```
 grep -n "colony" written_2/travel_guides/berlitz2/Bahamas-History.txt
 output:
@@ -66,7 +67,7 @@ output:
 grep -rl returns the names of the files that contain matches, rather than the matching lines themselves. It search all the subdirectories recursively until it get all the files that contains the specific String.
 
 # Examples
-1. grep -rl to get files that contains "government" in data directory
+## 1. grep -rl to get files that contains "government" in data directory
 ```
 grep -rl "government" written_2/
 output:
@@ -189,7 +190,7 @@ written_2/travel_guides/berlitz2/Vallarta-History.txt
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 
-2. grep -rl to get the files containing "China"
+## 2. grep -rl to get the files containing "China"
 ```
 grep -rl "China" written_2/
 output:
@@ -246,7 +247,7 @@ written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 grep -c only return the number of lines in the file that contain the String passed.
 
 ## Examples
-1. grep -c to find how many lines in Bahamas-History.txt contain government
+## 1. grep -c to find how many lines in Bahamas-History.txt contain government
 ```
 ####The following two lines are used to write lines in Bahamas-History.txt that contain government in count.txt and we use wc to count the line of if.
 ####By doing this, we wiill know how many lines are there that contains government in Bahamas-History.txt, and we can justify the answer we get later.
@@ -260,7 +261,7 @@ output:
 ####This shows that grep -c correctly show the number of lines in Bahamas-History that contain "government"
 ```
 
-2. grep -c to find how many lines in Bahamas-History.txt contain Lucayans
+## 2. grep -c to find how many lines in Bahamas-History.txt contain Lucayans
 ```
 grep -c "Lucayans" written_2/travel_guides/berlitz2/Bahamas-History.txt
 output:
