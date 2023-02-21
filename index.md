@@ -3,6 +3,8 @@
 ## `grep -v`(Source: *Chatgpt*)
 `grep` was used to check if a specific string is in the target file or not. If it is in the file, it will output the specific line it is located. 
 **However when you add a -v to the end, it will output all the lines that does not contain the string given.**
+`grep -v` is a useful command when every line of a file is only one word, e.g. names or ages. It can output all the names except for the one that we don't want to see. It help us filter out the element easily. 
+In lab report, we can use wc to count all files that doesn't contain "China" in the filename to sort out some files that has less possibility to contain "China" in the file content.
 
 *Examples*
 ## 1. Use grep -v to find all the file that doesn't contain "China" in the file name
@@ -38,7 +40,7 @@ output: N/A
 ```
 
 ## `grep -n`(Source: *Chatgpt*)
-This option adds line numbers to the output, which can be useful for tracking down a specific line of text.
+This option adds line numbers to the output, which can be useful for tracking down a specific line of text. When you are asked to provide the specific line number of the apperance of a word, you can use this command to help you get it immediately.
 
 *Examples*
 ## 1. use grep -n to get the line index of government's appearance in Bahamas-History.txt.
@@ -244,7 +246,7 @@ written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 
 # grep -c
-grep -c only return the number of lines in the file that contain the String passed.
+grep -c only return the number of lines in the file that contain the String passed. This is espeically useful in cases when you want to check if you use too many times of a specific word in essays or academic document. Also, when using `grep -c` in programming file, it tells you the habit of specific programmer, whether he uses more 'for loop' or 'while loop'.
 
 ## Examples
 ## 1. grep -c to find how many lines in Bahamas-History.txt contain government
